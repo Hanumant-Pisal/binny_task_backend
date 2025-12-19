@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "dev":"nodemon server.js",
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hanumant Pisal",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongoose": "^9.0.2"
   }
