@@ -5,11 +5,15 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
+    index: true,
   },
   email: {
     type: String,
     required: true,
     unique: true,
+    index: true,
+    lowercase: true,
+    trim: true,
   },
   passwordHash: {
     type: String,
@@ -27,7 +31,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     enum: ["admin", "user"],
     default: "user",
+    index: true,
   },
+}, {
+  timestamps: true,
+  collection: 'users'
 });
 
 module.exports = mongoose.model("User", userSchema);
